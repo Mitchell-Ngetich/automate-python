@@ -85,3 +85,12 @@
 # # we use number as a variable and also as a parameter in order
 # # to keep updating the current value returned after a while loop
 #     number = collatz(number)
+
+# total = 0
+# #adds until number == 0`
+# number = int(input("Enter a number: "))
+# while number != 0:
+#     total += number
+    
+#     number = int(input("Enter a number: "))
+# print(total) #if you indent print(total) it will print the total after each number is entered
