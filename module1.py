@@ -128,14 +128,58 @@
 # # because the key(color) already exists
 # print(spam)
 
-message = 'It was a bright cold day in April, and the clocks were striking thirteen.'
-count = {}
+# import pprint
 
-# counts the occurence of each character in a string in the dictionary
-# if the key i.e i, is not there, then it sets the value to 0 and increments it
-# and if the key i.e i, is there, then setdefault() does nothing.
-for i in message:
-    count.setdefault(i, 0)
-    count[i] += 1
+# message = 'It was a bright cold day in April, and the clocks were striking thirteen.'
+# count = {}
+
+# # counts the occurence of each character in a string in the dictionary
+# # if the key i.e i, is not there, then it sets the value to 0 and increments it
+# # and if the key i.e i, is there, then setdefault() does nothing.
+# for i in message:
+#     count.setdefault(i, 0)
+#     count[i] += 1
     
-print(count)
+# print(pprint.pformat(count))
+
+# Tick-tac-toe
+# the_board = {'top-L': ' ', 'top-M': ' ', 'top-R': ' ',
+#             'mid-L': ' ', 'mid-M': ' ', 'mid-R': ' ',
+#             'low-L': ' ', 'low-M': ' ', 'low-R': ' '}
+
+# def printBoard(board):
+#     print(board['top-L'] + '|' + board['top-M'] + '|' + board['top-R'])
+#     print('-+-+-')
+#     print(board['mid-L'] + '|' + board['mid-M'] + '|' + board['mid-R'])
+#     print('-+-+-')
+#     print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
+    
+# turn = "X"
+# for i in range(9):
+#     printBoard(the_board)
+#     print(f"Turn for {turn}. Move on which space?")
+#     move = input()
+#     the_board[move] = turn
+#     # check the current player if its X, next switch to O
+#     if turn == "X":
+#         turn = "O"
+#     else: turn = "X"
+# printBoard(the_board)
+
+all_guests = {'Alice': {'apples': 5, 'pretzels': 12},
+             'Bob': {'ham sandwiches': 3, 'apples': 2},
+             'Carol': {'cups': 3, 'apple pies': 1}}
+
+def total_brought(guests, items):
+    num_brought = 0
+    for k, v in guests.items(): #v reprents the {'apples': 5, 'pretzels': 12},and so on...
+        num_brought = num_brought + v.get(items, 0) # so items is equal to apples/cups etc...and if the item isn't present it will return 0
+    return num_brought
+
+print("Number of things being brought:")
+print(f"- Apples {total_brought(all_guests, 'apples')}")
+print(f"- Pretzels {total_brought(all_guests, 'pretzels')}")
+print(f"- Ham Sandwisches {total_brought(all_guests, 'ham sandwiches')}")
+print(f"- Cups {total_brought(all_guests, 'cups')}")
+print(f"- Apple Pies {total_brought(all_guests, 'apple pies')}")
+print(f"- cookies {total_brought(all_guests, 'cookies')}")
