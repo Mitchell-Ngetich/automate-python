@@ -94,3 +94,48 @@
     
 #     number = int(input("Enter a number: "))
 # print(total) #if you indent print(total) it will print the total after each number is entered
+
+#Slice method
+# animals = ['cat', 'bat', 'rat', 'elephant', "Rhino", "lion"]
+# for index, element in enumerate(animals):
+#     print(f"Index {index} in animals list is: {element}")
+
+# my_cat = {'size': 'fat', 'color': 'gray', 'disposition': 'loud'}
+# print(type(my_cat))
+
+# birthdays = {'Alice': 'Apr 1', 'Bob': 'Dec 12', 'Carol': 'Mar 4'}
+
+
+# while True:
+#     name = input("Enter your name: ")
+#     if name == "":
+#         break
+#     if name in birthdays:
+#         print(f"{birthdays[name]} is the birthday of {name}")
+#     else: 
+#         print(f"I don't have a birthday information for {name}")
+#         break
+    
+# spam = {'color': 'red', 'age': 42}
+# for k, v in spam.items():
+#     print(f"Key: {k}, Value: {v}")
+
+# spam = {'name': 'Pooka', 'age': 5}
+# spam.setdefault("color", "black")
+# # print(spam)
+# spam.setdefault("color", "white")
+# # even if you set the color to white, it will not change the color to white
+# # because the key(color) already exists
+# print(spam)
+
+message = 'It was a bright cold day in April, and the clocks were striking thirteen.'
+count = {}
+
+# counts the occurence of each character in a string in the dictionary
+# if the key i.e i, is not there, then it sets the value to 0 and increments it
+# and if the key i.e i, is there, then setdefault() does nothing.
+for i in message:
+    count.setdefault(i, 0)
+    count[i] += 1
+    
+print(count)
