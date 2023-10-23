@@ -166,20 +166,37 @@
 #     else: turn = "X"
 # printBoard(the_board)
 
-all_guests = {'Alice': {'apples': 5, 'pretzels': 12},
-             'Bob': {'ham sandwiches': 3, 'apples': 2},
-             'Carol': {'cups': 3, 'apple pies': 1}}
+# all_guests = {'Alice': {'apples': 5, 'pretzels': 12},
+#              'Bob': {'ham sandwiches': 3, 'apples': 2},
+#              'Carol': {'cups': 3, 'apple pies': 1}}
 
-def total_brought(guests, items):
-    num_brought = 0
-    for k, v in guests.items(): #v reprents the {'apples': 5, 'pretzels': 12},and so on...
-        num_brought = num_brought + v.get(items, 0) # so items is equal to apples/cups etc...and if the item isn't present it will return 0
-    return num_brought
+# def total_brought(guests, items):
+#     num_brought = 0
+#     for k, v in guests.items(): #v reprents the {'apples': 5, 'pretzels': 12},and so on...
+#         num_brought += v.get(items, 0) # so items is equal to apples/cups etc...and if the item isn't present it will return 0
+#     return num_brought
 
-print("Number of things being brought:")
-print(f"- Apples {total_brought(all_guests, 'apples')}")
-print(f"- Pretzels {total_brought(all_guests, 'pretzels')}")
-print(f"- Ham Sandwisches {total_brought(all_guests, 'ham sandwiches')}")
-print(f"- Cups {total_brought(all_guests, 'cups')}")
-print(f"- Apple Pies {total_brought(all_guests, 'apple pies')}")
-print(f"- cookies {total_brought(all_guests, 'cookies')}")
+# print("Number of things being brought:")
+# print(f"- Apples {total_brought(all_guests, 'apples')}")
+# print(f"- Pretzels {total_brought(all_guests, 'pretzels')}")
+# print(f"- Ham Sandwisches {total_brought(all_guests, 'ham sandwiches')}")
+# print(f"- Cups {total_brought(all_guests, 'cups')}")
+# print(f"- Apple Pies {total_brought(all_guests, 'apple pies')}")
+# print(f"- cookies {total_brought(all_guests, 'cookies')}")
+
+# CHESS DICTIONARY VALIDATOR
+# chess_data = {'1h': 'bking', '6c': 'wqueen', '2g': 'bbishop', '5h': 'bqueen', '3e': 'wking'}
+# def isValidChessBoard(chess):
+    
+    
+    # Manipulating strings
+# print("how are you\t Have you been good" )
+# print('''Dear Alice,
+
+# Eve's cat has been arrested for catnapping, cat burglary, and extortion.
+
+# Sincerely,
+# Bob''')
+
+'''today imlearning python so please
+keep off your ass'''
