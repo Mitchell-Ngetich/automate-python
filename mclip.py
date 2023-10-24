@@ -133,35 +133,35 @@ import sys, pyperclip
 #              ['dogs', 'cats', 'moose', 'goose']]
 # printTable(tableData)
 
-def printTable(tableData):
-    if not tableData:
-        return  # If the table is empty, return without printing anything.
+# def printTable(tableData):
+#     if not tableData:
+#         return  # If the table is empty, return without printing anything.
 
-    # Determine the number of rows and columns in the table
-    num_rows = len(tableData)
-    num_columns = len(tableData[0])
+#     # Determine the number of rows and columns in the table
+#     num_rows = len(tableData)
+#     num_columns = len(tableData[0])
 
-    # Create a list to store the width of the longest element in each column
-    colWidths = [0] * num_columns
+#     # Create a list to store the width of the longest element in each column
+#     colWidths = [0] * num_columns
 
-    # Calculate the maximum width for each column
-    for col in range(num_columns):
-        for row in range(num_rows):
-            element = tableData[row][col]
-            colWidths[col] = max(colWidths[col], len(element))
+#     # Calculate the maximum width for each column
+#     for col in range(num_columns):
+#         for row in range(num_rows):
+#             element = tableData[row][col]
+#             colWidths[col] = max(colWidths[col], len(element))
 
-    # Print the transposed table with elements right-aligned and padded with spaces
-    for col in range(num_columns):
-        for row in range(num_rows):
-            element = tableData[row][col]
-            # Right-align the element and pad with spaces
-            print(element.rjust(colWidths[col]), end=" ")
-        # Move to the next column
-        print()
+#     # Print the transposed table with elements right-aligned and padded with spaces
+#     for col in range(num_columns):
+#         for row in range(num_rows):
+#             element = tableData[row][col]
+#             # Right-align the element and pad with spaces
+#             print(element.rjust(colWidths[col]), end=" ")
+#         # Move to the next column
+#         print()
 
-# Example usage
-tableData = [['apples', 'oranges', 'cherries', 'banana'],
-             ['Alice', 'Bob', 'Carol', 'David'],
-             ['dogs', 'cats', 'moose', 'goose']]
+# # Example usage
+# tableData = [['apples', 'oranges', 'cherries', 'banana'],
+#              ['Alice', 'Bob', 'Carol', 'David'],
+#              ['dogs', 'cats', 'moose', 'goose']]
 
-printTable(tableData)
+# printTable(tableData)
