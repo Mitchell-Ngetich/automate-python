@@ -29,33 +29,37 @@
 # print("is Mitch-Mitch a phone number")
 # print(check_phone_number("Mitch-Mitch"))
     
-def is_kenyan_number(number):
-    if len(number) != 12:
-        return False
+# def is_kenyan_number(number):
+#     if len(number) != 12:
+#         return False
     
-    if number[:4] != "+254":
-            return False
+#     if number[:4] != "+254":
+#             return False
     
-    if number[4] != " ":
-        return False
+#     if number[4] != " ":
+#         return False
     
-    for i in range(5, 8):
-        if not number[i].isdecimal():
-            return False
+#     for i in range(5, 8):
+#         if not number[i].isdecimal():
+#             return False
         
-    if number[8] != " ":
-        return False
+#     if number[8] != " ":
+#         return False
     
-    for i in range(9, 12):
-        if not number[i].isdecimal():
-            return False
+#     for i in range(9, 12):
+#         if not number[i].isdecimal():
+#             return False
     
-    return True
+#     return True
 
-message = "Call me at +254 724 867 356 tomorrow. +254 726 789 674 is my office."
-for i in range(len(message)):
-    chunk = message[i:i+12] # it extracts a substring from the message that is potential kenyan phone number.
-    if is_kenyan_number(chunk): # checks if its valid kenyan number, then prints the number.
-        print(f"Phone number found: {chunk}")
-print("Done!")
+# message = "Call me at +254 724 867 356 tomorrow. +254 726 789 674 is my office."
+# for i in range(len(message)):
+#     chunk = message[i:i+12] # it extracts a substring from the message that is potential kenyan phone number.
+#     if is_kenyan_number(chunk): # checks if its valid kenyan number, then prints the number.
+#         print(f"Phone number found: {chunk}")
+# print("Done!")
 
+#Creating Regex object
+import re
+
+# Creating Regex object
