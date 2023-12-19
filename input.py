@@ -141,101 +141,116 @@ p = Path("/home/mitchell")
 
 import shelve
 
-shelfFile = shelve.open("mydata")
-cats = ["Zophie", "pooka", "simon"]
-shelfFile["cats"] = cats
-print(cats)
-shelfFile.close()
+# shelfFile = shelve.open("mydata")
+# cats = ["Zophie", "pooka", "simon"]
+# shelfFile["cats"] = cats
+# print(cats)
+# shelfFile.close()
 
 
 # (PROJECT) GENERATING RANDOM QUIZ FILES
-import random
+# import random
 
-capitals = {
-    "Alabama": "Montgomery",
-    "Alaska": "Juneau",
-    "Arizona": "Phoenix",
-    "Arkansas": "Little Rock",
-    "California": "Sacramento",
-    "Colorado": "Denver",
-    "Connecticut": "Hartford",
-    "Delaware": "Dover",
-    "Florida": "Tallahassee",
-    "Georgia": "Atlanta",
-    "Hawaii": "Honolulu",
-    "Idaho": "Boise",
-    "Illinois": "Springfield",
-    "Indiana": "Indianapolis",
-    "Iowa": "Des Moines",
-    "Kansas": "Topeka",
-    "Kentucky": "Frankfort",
-    "Louisiana": "Baton Rouge",
-    "Maine": "Augusta",
-    "Maryland": "Annapolis",
-    "Massachusetts": "Boston",
-    "Michigan": "Lansing",
-    "Minnesota": "Saint Paul",
-    "Mississippi": "Jackson",
-    "Missouri": "Jefferson City",
-    "Montana": "Helena",
-    "Nebraska": "Lincoln",
-    "Nevada": "Carson City",
-    "New Hampshire": "Concord",
-    "New Jersey": "Trenton",
-    "NewMexico": "Santa Fe",
-    "New York": "Albany",
-    "North Carolina": "Raleigh",
-    "North Dakota": "Bismarck",
-    "Ohio": "Columbus",
-    "Oklahoma": "Oklahoma City",
-    "Oregon": "Salem",
-    "Pennsylvania": "Harrisburg",
-    "Rhode Island": "Providence",
-    "South Carolina": "Columbia",
-    "South Dakota": "Pierre",
-    "Tennessee": "Nashville",
-    "Texas": "Austin",
-    "Utah": "Salt Lake City",
-    "Vermont": "Montpelier",
-    "Virginia": "Richmond",
-    "Washington": "Olympia",
-    "WestVirginia": "Charleston",
-    "Wisconsin": "Madison",
-    "Wyoming": "Cheyenne",
-}
+# capitals = {
+#     "Alabama": "Montgomery",
+#     "Alaska": "Juneau",
+#     "Arizona": "Phoenix",
+#     "Arkansas": "Little Rock",
+#     "California": "Sacramento",
+#     "Colorado": "Denver",
+#     "Connecticut": "Hartford",
+#     "Delaware": "Dover",
+#     "Florida": "Tallahassee",
+#     "Georgia": "Atlanta",
+#     "Hawaii": "Honolulu",
+#     "Idaho": "Boise",
+#     "Illinois": "Springfield",
+#     "Indiana": "Indianapolis",
+#     "Iowa": "Des Moines",
+#     "Kansas": "Topeka",
+#     "Kentucky": "Frankfort",
+#     "Louisiana": "Baton Rouge",
+#     "Maine": "Augusta",
+#     "Maryland": "Annapolis",
+#     "Massachusetts": "Boston",
+#     "Michigan": "Lansing",
+#     "Minnesota": "Saint Paul",
+#     "Mississippi": "Jackson",
+#     "Missouri": "Jefferson City",
+#     "Montana": "Helena",
+#     "Nebraska": "Lincoln",
+#     "Nevada": "Carson City",
+#     "New Hampshire": "Concord",
+#     "New Jersey": "Trenton",
+#     "NewMexico": "Santa Fe",
+#     "New York": "Albany",
+#     "North Carolina": "Raleigh",
+#     "North Dakota": "Bismarck",
+#     "Ohio": "Columbus",
+#     "Oklahoma": "Oklahoma City",
+#     "Oregon": "Salem",
+#     "Pennsylvania": "Harrisburg",
+#     "Rhode Island": "Providence",
+#     "South Carolina": "Columbia",
+#     "South Dakota": "Pierre",
+#     "Tennessee": "Nashville",
+#     "Texas": "Austin",
+#     "Utah": "Salt Lake City",
+#     "Vermont": "Montpelier",
+#     "Virginia": "Richmond",
+#     "Washington": "Olympia",
+#     "WestVirginia": "Charleston",
+#     "Wisconsin": "Madison",
+#     "Wyoming": "Cheyenne",
+# }
 
-for quizNum in range(35):
-    #Crate the quiz and answer key files
-    quizfile = open(f"capitalsquiz{quizNum + 1}.txt", "w")
-    answerfile = open(f"capitalsquiz_answers{quizNum + 1}.txt", "w")
+# for quizNum in range(35):
+#     #Crate the quiz and answer key files
+#     quizfile = open(f"capitalsquiz{quizNum + 1}.txt", "w")
+#     answerfile = open(f"capitalsquiz_answers{quizNum + 1}.txt", "w")
     
-    #Write out the header for the quiz
-    quizfile.write("Name:\n'nDate:\n\nPeriod:\n\n")
-    quizfile.write((" " * 20) + f"State Capitals quiz (Form{quizNum + 1})")
-    quizfile.write("\n\n")
+#     #Write out the header for the quiz
+#     quizfile.write("Name:\n'nDate:\n\nPeriod:\n\n")
+#     quizfile.write((" " * 20) + f"State Capitals quiz (Form{quizNum + 1})")
+#     quizfile.write("\n\n")
     
-    #Shuffle the order of the states
-    states = list(capitals.keys())
-    random.shuffle(states)
+#     #Shuffle the order of the states
+#     states = list(capitals.keys())
+#     random.shuffle(states)
     
-    #loop through all 50 states, making a question for each
-    for questionNum in range(50):
-        #get right and wrong answers
-        correctAnswer = capitals[states[questionNum]]
-        wrongAnswer = list(capitals.values())
-        del wrongAnswer[wrongAnswer.index(correctAnswer)]
-        wrongAnswer = random.sample(wrongAnswer, 3)
-        answerOptions = wrongAnswer + [correctAnswer]
-        random.shuffle(answerOptions)
+#     #loop through all 50 states, making a question for each
+#     for questionNum in range(50):
+#         #get right and wrong answers
+#         correctAnswer = capitals[states[questionNum]]
+#         wrongAnswer = list(capitals.values())
+#         del wrongAnswer[wrongAnswer.index(correctAnswer)]
+#         wrongAnswer = random.sample(wrongAnswer, 3)
+#         answerOptions = wrongAnswer + [correctAnswer]
+#         random.shuffle(answerOptions)
         
-        # Write the question and answer options to the quiz file
-        quizfile.write(f"{questionNum + 1}. What is the capital of {states[questionNum]}?\n")
-        for i in range(4):
-            quizfile.write(f"   {'ABCD'[i]}. { answerOptions[i]}\n")
-        quizfile.write("\n")
+#         # Write the question and answer options to the quiz file
+#         quizfile.write(f"{questionNum + 1}. What is the capital of {states[questionNum]}?\n")
+#         for i in range(4):
+#             quizfile.write(f"   {'ABCD'[i]}. { answerOptions[i]}\n")
+#         quizfile.write("\n")
         
-        # Write the answer key to a file
-        answerfile.write(f"{questionNum + 1}.
-        {'ABCD'[answerOptions.index(correctAnswer)]}")
-        quizfile.close()
-        answerfile.close()
+#         # Write the answer key to a file
+#         answerfile.write(f"{questionNum + 1}.{'ABCD'[answerOptions.index(correctAnswer)]}")
+#     quizfile.close()
+#     answerfile.close()
+
+# UPDATABLE MULTI-CLIPBOARD
+# import shelve, pyperclip, sys
+
+# mcbShelf = shelve.open("mcb")
+
+# if len(sys.argv) == 3 and sys.argv[1].lower() == "save":
+#     mcbShelf[sys.argv[2]] = pyperclip.paste()
+# elif len(sys.argv) == 2:
+    
+#     # List keywords and load content
+#     if sys.argv[1].lower == "list":
+#         pyperclip.copy(str(list(mcbShelf.keys())))
+#     elif sys.argv[1] in mcbShelf:
+#         pyperclip.copy(mcbShelf[sys.argv[1]])
+# mcbShelf.close()
